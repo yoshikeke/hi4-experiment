@@ -5,21 +5,29 @@
 <title>スペック比較 - Korgアナログガジェット紹介</title>
 <link rel="stylesheet" href="style.css" />
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 <script type="text/javascript">
-  // パッケージをロードする (corechart: 棒グラフ用, table: テーブル用)
   google.charts.load('current', {'packages':['corechart']});
-  
-  // グラフを描画するコールバック関数をセット
   google.charts.setOnLoadCallback(drawCharts);
-
-  // 複数のグラフを描画する
   function drawCharts() {
-    drawPriceChart(); // グラフ1（棒グラフ）を呼び出す
+    drawPriceChart(); 
+    drawChart();
   }
-
-  // --- グラフ1: 棒グラフ (価格比較) ---
+    function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', '製品');
+        data.addColumn('number', '重さ(g)');
+        data.addRows([
+            ['minilogue', 2800],
+            ['volca beats', 372],
+            ['monotron delay', 95],
+        ]);
+        
+        var options = {'title':'それぞれの重量', 'width':600, 'height':450};
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+    }
   function drawPriceChart() {
-    // データを新しい機種の価格（おおよそ）に変更
     var data = google.visualization.arrayToDataTable([
       ['ガジェット', 'おおよその価格 (円)', { role: 'style' }],
       ['Korg Monologue', 40000, '#4285F4'],
@@ -57,7 +65,7 @@
 
 <h2>グラフによる比較</h2>
 <p>
-`recommendations.html` で紹介した3機種のスペックを、Google Chartsを用いて比較します。
+オススメ機種で紹介した3機種のスペックを、Google Chartsを用いて比較します。
 （注：価格やスペックはあくまで目安です。）
 </p>
 
@@ -66,48 +74,13 @@
 3機種のおおよその市場価格を比較します。
 </p>
 <div id="price_chart_div"></div>
-
-<h3>機能概要（テーブルチャート）</h3>
+<h3>重量の比較（円グラフ）</h3>
 <p>
-主な機能や特徴を表（テーブル）で比較します。
+3機種の重量を比較します。
 </p>
-<table>
-  <caption>Korgアナログガジェット スペック比較</caption>
-  <thead>
-    <tr>
-      <th scope="col">仕様</th>
-      <th scope="col">Korg Monologue</th>
-      <th scope="col">Korg Volca Beats</th>
-      <th scope="col">Korg Monotron Delay</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">主な分類</th>
-      <td>シンセサイザー</td>
-      <td>リズムマシン</td>
-      <td>エフェクト/シンセ</td>
-    </tr>
-    <tr>
-      <th scope="row">音源方式</th>
-      <td>アナログ</td>
-      <td>アナログ</td>
-      <td>アナログ</td>
-    </tr>
-    <tr>
-      <th scope="row">シーケンサー</th>
-      <td>16ステップ</td>
-      <td>16ステップ</td>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">電源</th>
-      <td>ACアダプタ or 単3x6本</td>
-      <td>ACアダプタ or 単3x6本</td>
-      <td>単4x2本</td>
-    </tr>
-  </tbody>
-</table>
+<div id="chart_div"></div>
+
+
 </div>
 </body>
 </html>
