@@ -1,0 +1,62 @@
+/* ページ全体の基本設定 */
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    background-color: #f4f4f9; /* 背景色を薄いグレーに */
+    color: #333; /* 基本の文字色 */
+    line-height: 1.6; /* 行間を読みやすく */
+    margin: 0;
+    padding: 0;
+}
+
+/* 全体を囲むボックス */
+.container {
+    max-width: 800px; /* サイトの最大幅 */
+    margin: 20px auto; /* 上下に隙間・左右中央揃え */
+    padding: 20px;
+    background-color: #ffffff; /* 白い背景 */
+    border-radius: 8px; /* 角を丸く */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* 薄い影 */
+}
+
+/* ヘッダー（タイトル） */
+header {
+    text-align: center; /* 中央揃え */
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee; /* 区切り線 */
+}
+
+header h1 {
+    color: #0056b3; /* タイトルの色（濃い青） */
+    margin: 0;
+}
+
+/* 各セクション（h2）の共通設定 */
+section {
+    margin-bottom: 20px; /* セクションごとの隙間 */
+}
+
+h2 {
+    color: #007bff; /* 見出しの色（青） */
+    border-bottom: 2px solid #007bff; /* 下線 */
+    padding-bottom: 5px;
+}
+
+/* リスト（プロフィール用） */
+ul {
+    padding-left: 20px; /* 左側の余白 */
+    list-style-type: square; /* リストのマーク */
+}
+
+li {
+    margin-bottom: 8px; /* リスト項目の隙間 */
+}
+
+/* フッター（コピーライト） */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee; /* 上に区切り線 */
+    font-size: 0.9em;
+    color: #888; /* 薄いグレーの文字 */
+}

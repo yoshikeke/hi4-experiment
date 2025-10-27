@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+body { /* Webページ全体のスタイルを指定 */
+    color: black;
+    background-color: white;
+}
+
+h1 {  /* h1のスタイルを指定 */
+    font-size: 30pt; 
+}
+
+h2 {  /* h2のスタイルを指定 */
+    font-size: 24px;
+    border-bottom-width: 4px;   /* 下の線の太さ     */
+    border-bottom-style: solid;  /* 下の線のスタイル */
+    border-bottom-color: blue;  /* 下の線の色       */
+
+    border-left-width: 10px;     /* 左の線の太さ     */
+    border-left-style: solid;    /* 左の線のスタイル */
+    border-left-color: blue;    /* 左の線の色       */
+    padding-left: 10px;  /* 左の線と文字の間 */
+}
+
+h3 {  /* h3のスタイルを指定 */
+    font-size: 20px; /* 文字の大きさ */
+    border-bottom-width: 3px;   /* 下の線の太さ     */
+    border-bottom-style: dotted;  /* 下の線のスタイル */
+    border-bottom-color: #aaaaff;  /* 下の線の色       */
+    margin-top: 30px;  /* 上部の余白 */
+}
+
+table {
+    /* 表の設定 */
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th {
+    /* 表見出しの設定 */
+    text-align: left;  /* 左寄せ */
+    padding: 5px 10px;  /* 余白設定 */
+}
+td {
+    /* 表のデータセルの設定 */
+    text-align: left;  /* 左寄せ */
+    padding: 5px 10px;  /* 余白設定 */
+}
+
+/* ナビゲーション（メニュー）部分の設定 */
+nav ul {  /* 帯の部分 */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #eeeeee;  /* 背景色 */
+}
+nav li {
+  float: left;
+}
+nav li a {  /* 項目の部分 */
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+nav li a:hover { /* マウスポインタが通過したとき */
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+li:hover {
+  background-color: rgb(163, 163, 163);
+}

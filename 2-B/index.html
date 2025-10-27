@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Google Charts Test</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', '内容');
+          data.addColumn('number', '時間');
+          data.addRows([
+              ['ゲーム', 2],
+              ['読書', 2],
+              ['ピアノ', 1],
+          ]);
+          var options = {'title':'自由時間の過ごし方', 'width':600, 'height':450};
+          var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+          chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Google Charts Test</h1>
+    <h2>自由時間の過ごし方</h2>
+    <p>
+      5時間自由に使える時間があったら、次のようなことをします。
+    </p>
+    <div id="chart_div"></div>
+  </body>
+</html>

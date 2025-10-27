@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+body { /* Webページ全体のスタイルを指定 */
+    color: black; /* 文字の色 */
+    background-color: white;  /* 背景の色 */
+}
+h1 {  /* h1のスタイルを指定 */
+    font-size: 30pt; 
+}
+
+h2 {  /* h2のスタイルを指定 */
+    font-size: 24px;
+    border-bottom-width: 4px;   /* 下の線の太さ     */
+    border-bottom-style: solid;  /* 下の線のスタイル */
+    border-bottom-color: rgba(0, 0, 99, 0.921)e;  /* 下の線の色       */
+
+    border-left-width: 10px;     /* 左の線の太さ     */
+    border-left-style: solid;    /* 左の線のスタイル */
+    border-left-color: rgba(0, 0, 99, 0.921);    /* 左の線の色       */
+    padding-left: 10px;  /* 左の線と文字の間 */
+}
+
+h3 {  /* h3のスタイルを指定 */
+    font-size: 20px; /* 文字の大きさ */
+    border-bottom-width: 3px;   /* 下の線の太さ     */
+    border-bottom-style: dotted;  /* 下の線のスタイル */
+    border-bottom-color: #aaaaff;  /* 下の線の色       */
+    margin-top: 30px;  /* 上部の余白 */
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto; 
+    padding: 20px;
+    background-color: #eaeaea;
+    border-radius: 8px; 
+}
