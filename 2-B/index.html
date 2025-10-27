@@ -2,48 +2,37 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8" />
-<title>タイトル（テーマに合わせて変更する）</title>
+<title>おすすめシンセサイザー紹介</title>
 <link rel="stylesheet" href="style.css" />
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-<script type="text/javascript">
-    google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', '内容');
-        data.addColumn('number', '時間');
-        data.addRows([
-            ['ゲーム', 2],
-            ['読書', 2],
-            ['ピアノ', 1],
-        ]);
-        var options = {'title':'自由時間の過ごし方', 'width':600, 'height':450};
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-    }
-</script>
 </head>
 <body>
-<h1>タイトル（テーマに合わせて変更する）</h1>
+  <div class="container">
+    <h1>Korgアナログガジェット紹介</h1>
 <nav>
   <ul>
     <li><a href="index.html">概要</a></li>
-    <!-- 追記する -->
+    <li><a href="recommendations.html">おすすめ機種</a></li>
+    <li><a href="comparison.html">スペック比較</a></li>
   </ul>
 </nav>
 
 <h2>概要</h2>
 
 <p>
-このページは，◯◯に関するWebサイトです．
-ページ構成は，次のようになっています．
+このWebサイトは，Korg（コルグ）社がリリースしている人気のアナログ・ガジェット「Monologue」、「Volca Beats」、「Monotron Delay」を紹介するWebサイトです。
+</p>
+<p>
+それぞれ「シンセサイザー」「リズムマシン」「エフェクター」と異なる特徴を持つ、個性的で手の届きやすい価格帯の3機種を取り上げます。
 </p>
 
 <h3>ページ構成</h3>
 <ul>
-<li>（各ページの簡単な説明）</li>
+  <li><a href="index.html">概要</a>: このサイトの目的とページ構成の案内です。（このページ）</li>
+  <li><a href="recommendations.html">おすすめ機種</a>: 3つのガジェット（Monologue, Volca Beats, Monotron Delay）の概要を紹介します。</li>
+  <li><a href="comparison.html">スペック比較</a>: 3機種の価格や機能について、Google Chartsを用いたグラフで視覚的に比較します。</li>
 </ul>
-<div id="chart_div"></div>
+  </div>
 </body>
 </html>

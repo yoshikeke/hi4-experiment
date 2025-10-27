@@ -51,20 +51,21 @@ nav ul {  /* 帯の部分 */
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #eeeeee;  /* 背景色 */
+  background-color: #696770;  /* 背景色 */
 }
 nav li {
   float: left;
 }
 nav li a {  /* 項目の部分 */
   display: block;
-  color: black;
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
 }
-nav li a:hover { /* マウスポインタが通過したとき */
+nav li :hover { /* マウスポインタが通過したとき */
   font-weight: bold;
+  background-color: rgb(163, 163, 163);
 }
 
 table {
@@ -107,6 +108,28 @@ tfoot th {
 tfoot td {
   font-weight: bold;
 }
-li:hover {
-  background-color: rgb(163, 163, 163);
+.container {
+    max-width: 800px;
+    margin: 20px auto; 
+    padding: 20px;
+    background-color: #eaeaea;
+    border-radius: 8px; 
+}
+
+th {
+    /* 表見出しの設定 */
+    text-align: left;  /* 左寄せ */
+    padding: 5px 10px;  /* 余白設定 */
+}
+td {
+    /* 表のデータセルの設定 */
+    text-align: left;  /* 左寄せ */
+    padding: 5px 10px;  /* 余白設定 */
+}
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
 }
